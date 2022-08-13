@@ -77,8 +77,8 @@
 <main>
 	<h1>盧恩符石</h1>
 	<div class="container ">
-		<button class=" " title="排義" on:click="{(e) => (handleTabClick('排義'))}" >排義</button>
-		<button class="" title="及時占卜" on:click="{(e) => (handleTabClick('及時占卜'))}" >及時占卜</button>
+		<button class="button-60" title="排義" on:click="{(e) => (handleTabClick('排義'))}" >排義</button>
+		<button class="button-60" title="及時占卜" on:click="{(e) => (handleTabClick('及時占卜'))}" >及時占卜</button>
 	</div>
 
 	<span >喜歡嗎?歡迎分享網站</span>
@@ -91,13 +91,13 @@
 	<div class="stage">
 		<ul class="btn-nav">
 			<li class="nav-btn">
-				<a class=" " href="#" on:click="{prevOne}">
+				<a class="" href="#" on:click="{prevOne}">
 					<div class="arrow swiper-button-prev arrowup"></div>
 				</a>
 			</li>
 
 			<li class="nav-btn">
-				<a class=" " href="#" on:click="{nextOne}">
+				<a class="" href="#" on:click="{nextOne}">
 				<div class="arrow swiper-button-next arrowdown"></div>
 
 			</li>
