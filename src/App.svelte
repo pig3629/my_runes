@@ -1,0 +1,175 @@
+<script>
+	import SearchInput from './components/SearchInput.svelte';
+	import runes from './assets/mean.json';
+
+
+	let search=false;
+	let stone_title="";
+	let stone_content="";
+	let btn_default="排義";
+	let result="";
+
+	let site=[];
+	function handleTabClick(tabName) {
+		btn_default = tabName;
+		if(btn_default =="及時占卜"){
+			startPlay();
+		}
+
+	}
+	//搜尋
+	function handleSearch(e) {
+		search = e.detail.value;
+		runes.filter((word,index)=>{
+			if(word["name"].toLocaleLowerCase().indexOf(search) > -1 && search){
+				num=index;
+				stone=runes[num];
+				stone_title=stone["title"];
+				stone_content=stone["content"];
+			}
+		});
+	}
+	//隨機載入盧恩
+	let num=getRandom(0,runes.length-1);
+	let stone=runes[num];
+	if(stone){
+		stone_title=stone["title"];
+		stone_content=stone["content"];
+	}
+
+	//產生min到max之間的亂數
+	function getRandom(min,max){
+		return Math.floor(Math.random()*(max-min+1))+min;
+	};
+	//上一個
+	function prevOne() {
+		num=num-1;
+		if(num<0){
+			num=runes.length-1;
+		}
+		stone=runes[num];
+		stone_title=stone["title"];
+		stone_content=stone["content"];
+	}
+	//下一個
+	function nextOne() {
+
+		 num=num+1;
+		if(num>runes.length-1){
+			num=0;
+		}
+		stone=runes[num];
+		stone_title=stone["title"];
+		stone_content=stone["content"];
+	}
+	//開始占卜
+	function startPlay(){
+		let runes2= JSON.parse(JSON.stringify(runes)); //copy
+		let item = runes2.sort(() => 0.5 - Math.random()); //結果取0~4即可
+		result=item.slice(0,4);
+		for(let i=0;i<4;i++){
+			site[i]=getRandom(0,1);
+		}
+	}
+
+</script>
+
+<main>
+	<h1>盧恩符石</h1>
+	<div class="container ">
+		<button class=" " title="排義" on:click="{(e) => (handleTabClick('排義'))}" >排義</button>
+		<button class="" title="及時占卜" on:click="{(e) => (handleTabClick('及時占卜'))}" >及時占卜</button>
+	</div>
+
+	<span >喜歡嗎?歡迎分享網站</span>
+
+
+	{#if btn_default=="排義"}
+	<div class="pd-5">
+        <SearchInput id="search-input" on:search={handleSearch} />
+    </div>
+	<div class="stage">
+		<ul class="btn-nav">
+			<li class="nav-btn">
+				<a class=" " href="#" on:click="{prevOne}">
+					<div class="arrow swiper-button-prev arrowup"></div>
+				</a>
+			</li>
+
+			<li class="nav-btn">
+				<a class=" " href="#" on:click="{nextOne}">
+				<div class="arrow swiper-button-next arrowdown"></div>
+
+			</li>
+		</ul>
+	</div>
+	<div class="stage_content">
+		<div class="stone-img runes {stone_title}" title="{stone_title}" style="background-image: url('img/runes/{stone_title.toLocaleLowerCase()}.png');"></div>
+		<h3> {stone["name"]}</h3>
+
+
+		<div class="stone-content" title="{stone_title}">
+				{stone_content}
+		</div>
+
+	</div>
+	{:else}
+	<div class="stage_content">
+
+		<div class="">
+			<div class="stone-box group-3item">
+				{#each result as item, index}
+					{#if index === 0}
+					<div class="stone-inner">
+						<div class="stone-img runes {item["title"]} {["","reverse"][site[index]]}"   title="{item["title"]}" style="background-image: url('img/runes/{item["title"].toLocaleLowerCase()}.png');"></div>
+						<h4>{item["name"]}{["","[逆]"][site[index]]}</h4>
+					</div>
+					{/if}
+				{/each}
+			</div>
+			<div class="stone-box group-3item">
+
+				{#each result as item, index}
+					{#if index >0}
+					<div class="stone-inner">
+						<div class="stone-img runes {item["title"]} {["","reverse"][site[index]]}" title="{item["title"]}" style="background-image: url('img/runes/{item["title"].toLocaleLowerCase()}.png');"></div>
+						<h4>{item["name"]}{["","[逆]"][site[index]]}</h4>
+					</div>
+					{/if}
+				{/each}
+
+
+			</div>
+		</div>
+	</div>
+	{/if}
+
+
+
+</main>
+
+<style>
+	main {
+		text-align: center;
+		padding: 1em;
+		max-width: 240px;
+		margin: 0 auto;
+
+	}
+
+	h1 {
+		color: #418df7;
+		text-transform: uppercase;
+		font-size: 3em;
+		font-weight: 100;
+	}
+	.pd-5{
+		padding: 5px;
+	}
+	@media (min-width: 640px) {
+		main {
+			max-width: none;
+		}
+	}
+
+</style>
