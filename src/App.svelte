@@ -15,8 +15,31 @@
 		if(btn_default =="及時占卜"){
 			startPlay();
 		}
-
 	}
+
+//上一個
+	function prevOne() {
+		num=num-1;
+		if(num<0){
+			num=runes.length-1;
+		}
+		stone=runes[num];
+		stone_title=stone["title"];
+		stone_content=stone["content"];
+	}
+	//下一個
+	function nextOne() {
+
+		 num=num+1;
+		if(num>runes.length-1){
+			num=0;
+		}
+		stone=runes[num];
+		stone_title=stone["title"];
+		stone_content=stone["content"];
+	}
+
+
 	//搜尋
 	function handleSearch(e) {
 		search = e.detail.value;
@@ -41,27 +64,7 @@
 	function getRandom(min,max){
 		return Math.floor(Math.random()*(max-min+1))+min;
 	};
-	//上一個
-	function prevOne() {
-		num=num-1;
-		if(num<0){
-			num=runes.length-1;
-		}
-		stone=runes[num];
-		stone_title=stone["title"];
-		stone_content=stone["content"];
-	}
-	//下一個
-	function nextOne() {
 
-		 num=num+1;
-		if(num>runes.length-1){
-			num=0;
-		}
-		stone=runes[num];
-		stone_title=stone["title"];
-		stone_content=stone["content"];
-	}
 	//開始占卜
 	function startPlay(){
 		let runes2= JSON.parse(JSON.stringify(runes)); //copy
@@ -104,7 +107,7 @@
 		</ul>
 	</div>
 	<div class="stage_content">
-		<div class="stone-img runes {stone_title}" title="{stone_title}" style="background-image: url('img/runes/{stone_title.toLocaleLowerCase()}.png');"></div>
+		<div class="stone-img runes {stone_title} " title="{stone_title}" style="background-image: url('img/runes/{stone_title.toLocaleLowerCase()}.png');"></div>
 		<h3> {stone["name"]}</h3>
 
 

@@ -6,8 +6,12 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    height: 10rem;
-    width: 10rem;
+    height: 10em;
+    width: 10em;
     /* filter: opacity(0.5) drop-shadow(0 0 0 blue); */
 }
 
+
+.reverse {
+    transform: rotateY(180deg)  rotateX(180deg);
+}

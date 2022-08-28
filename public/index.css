@@ -6,6 +6,10 @@ body{
     width: 100%;
     transition: background 0.5s;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .stage .btn-nav{
@@ -27,7 +31,8 @@ body{
 
     right: 2rem;
 
-    margin: 10% auto;
+    margin-inline-end: -0.5em;
+    margin-block-start: 3rem;
 }
 .stage .nav-btn {
 
@@ -92,9 +97,6 @@ ul li {
 
 
 }
-.reverse {
-    transform: rotateY(180deg);
-}
 
 .content{
     display: flex;
@@ -106,7 +108,7 @@ ul li {
 }
 
 .stage_content {
-    margin-top: 5rem;
+
     z-index: 1;
     display: flex;
     padding-left: 0;
@@ -114,9 +116,10 @@ ul li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2% auto;
+
     align-content: center;
     flex-wrap: nowrap;
+    margin-inline-start: 1rem;
 }
 
 
@@ -151,19 +154,19 @@ ul li {
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
-    transform: scale(1.1) rotateY(180deg);
+    transform: scale(1.1) rotateY(180deg)  rotateX(180deg);
     transition: 0.14s;
 }
 .stone-content{
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
-    padding: 1rem 4rem 1rem 4rem;
-    height: 190px;
+    padding: 1rem;
+    min-width: 16rem;
+    max-height: 16rem;
+
     overflow-y: overlay;
-    content: "";
-    clear: both;
-    padding: 10px 10px 10px 15px;
-    margin: 30px 0 30px;
+    margin: auto;
+    margin-inline-start: -0.5rem;
     background-color: rgba(244, 244, 244, 0.525);
     border-radius: 10px;
 }
