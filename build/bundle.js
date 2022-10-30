@@ -448,9 +448,9 @@ var app = (function () {
     			input = element("input");
     			attr_dev(input, "id", /*id*/ ctx[0]);
     			attr_dev(input, "placeholder", "輸入關鍵字搜尋");
-    			attr_dev(input, "class", "search svelte-10c673f");
+    			attr_dev(input, "class", "search svelte-12hmxru");
     			attr_dev(input, "type", "search");
-    			add_location(input, file$1, 53, 0, 1011);
+    			add_location(input, file$1, 53, 0, 992);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -718,9 +718,8 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (119:1) {:else}
+    // (131:1) {:else}
     function create_else_block(ctx) {
-    	let div3;
     	let div2;
     	let div0;
     	let t;
@@ -743,7 +742,6 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div3 = element("div");
     			div2 = element("div");
     			div0 = element("div");
 
@@ -759,17 +757,14 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "stone-box group-3item");
-    			add_location(div0, file, 122, 3, 2708);
+    			add_location(div0, file, 134, 3, 2694);
     			attr_dev(div1, "class", "stone-box group-3item");
-    			add_location(div1, file, 132, 3, 3143);
+    			add_location(div1, file, 144, 3, 3129);
     			attr_dev(div2, "class", "");
-    			add_location(div2, file, 121, 2, 2689);
-    			attr_dev(div3, "class", "stage_content");
-    			add_location(div3, file, 119, 1, 2656);
+    			add_location(div2, file, 131, 1, 2671);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div3, anchor);
-    			append_dev(div3, div2);
+    			insert_dev(target, div2, anchor);
     			append_dev(div2, div0);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
@@ -835,7 +830,7 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div3);
+    			if (detaching) detach_dev(div2);
     			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
     		}
@@ -845,14 +840,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(119:1) {:else}",
+    		source: "(131:1) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:1) {#if btn_default=="排義"}
+    // (93:1) {#if btn_default=="排義"}
     function create_if_block(ctx) {
     	let div0;
     	let searchinput;
@@ -867,7 +862,6 @@ var app = (function () {
     	let a1;
     	let div2;
     	let t2;
-    	let div6;
     	let div4;
     	let div4_class_value;
     	let t3;
@@ -903,7 +897,6 @@ var app = (function () {
     			a1 = element("a");
     			div2 = element("div");
     			t2 = space();
-    			div6 = element("div");
     			div4 = element("div");
     			t3 = space();
     			h3 = element("h3");
@@ -911,36 +904,34 @@ var app = (function () {
     			t5 = space();
     			div5 = element("div");
     			t6 = text(/*stone_content*/ ctx[1]);
-    			attr_dev(div0, "class", "pd-5 svelte-1hepn69");
-    			add_location(div0, file, 90, 1, 1866);
+    			attr_dev(div0, "class", "pd-5");
+    			add_location(div0, file, 93, 1, 1900);
     			attr_dev(div1, "class", "arrow swiper-button-prev arrowup");
-    			add_location(div1, file, 97, 5, 2090);
+    			add_location(div1, file, 100, 5, 2124);
     			attr_dev(a0, "class", "");
     			attr_dev(a0, "href", "#");
-    			add_location(a0, file, 96, 4, 2041);
+    			add_location(a0, file, 99, 4, 2075);
     			attr_dev(li0, "class", "nav-btn");
-    			add_location(li0, file, 95, 3, 2015);
+    			add_location(li0, file, 98, 3, 2049);
     			attr_dev(div2, "class", "arrow swiper-button-next arrowdown");
-    			add_location(div2, file, 103, 4, 2243);
+    			add_location(div2, file, 106, 4, 2277);
     			attr_dev(a1, "class", "");
     			attr_dev(a1, "href", "#");
-    			add_location(a1, file, 102, 4, 2195);
+    			add_location(a1, file, 105, 4, 2229);
     			attr_dev(li1, "class", "nav-btn");
-    			add_location(li1, file, 101, 3, 2169);
+    			add_location(li1, file, 104, 3, 2203);
     			attr_dev(ul, "class", "btn-nav");
-    			add_location(ul, file, 94, 2, 1990);
+    			add_location(ul, file, 97, 2, 2024);
     			attr_dev(div3, "class", "stage");
-    			add_location(div3, file, 93, 1, 1967);
-    			attr_dev(div4, "class", div4_class_value = "stone-img runes " + /*stone_title*/ ctx[0] + "" + " svelte-1hepn69");
+    			add_location(div3, file, 96, 1, 2001);
+    			attr_dev(div4, "class", div4_class_value = "stone-img runes " + /*stone_title*/ ctx[0] + "");
     			attr_dev(div4, "title", /*stone_title*/ ctx[0]);
     			set_style(div4, "background-image", "url('img/runes/" + /*stone_title*/ ctx[0].toLocaleLowerCase() + ".png')");
-    			add_location(div4, file, 109, 2, 2361);
-    			add_location(h3, file, 110, 2, 2519);
+    			add_location(div4, file, 111, 1, 2364);
+    			add_location(h3, file, 112, 2, 2522);
     			attr_dev(div5, "class", "stone-content");
     			attr_dev(div5, "title", /*stone_title*/ ctx[0]);
-    			add_location(div5, file, 113, 2, 2552);
-    			attr_dev(div6, "class", "stage_content");
-    			add_location(div6, file, 108, 1, 2330);
+    			add_location(div5, file, 114, 2, 2553);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -956,13 +947,12 @@ var app = (function () {
     			append_dev(li1, a1);
     			append_dev(a1, div2);
     			insert_dev(target, t2, anchor);
-    			insert_dev(target, div6, anchor);
-    			append_dev(div6, div4);
-    			append_dev(div6, t3);
-    			append_dev(div6, h3);
+    			insert_dev(target, div4, anchor);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, h3, anchor);
     			append_dev(h3, t4);
-    			append_dev(div6, t5);
-    			append_dev(div6, div5);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, div5, anchor);
     			append_dev(div5, t6);
     			current = true;
 
@@ -976,7 +966,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*stone_title*/ 1 && div4_class_value !== (div4_class_value = "stone-img runes " + /*stone_title*/ ctx[0] + "" + " svelte-1hepn69")) {
+    			if (!current || dirty & /*stone_title*/ 1 && div4_class_value !== (div4_class_value = "stone-img runes " + /*stone_title*/ ctx[0] + "")) {
     				attr_dev(div4, "class", div4_class_value);
     			}
 
@@ -1010,7 +1000,11 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(div3);
     			if (detaching) detach_dev(t2);
-    			if (detaching) detach_dev(div6);
+    			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(h3);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(div5);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -1020,14 +1014,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(90:1) {#if btn_default==\\\"排義\\\"}",
+    		source: "(93:1) {#if btn_default==\\\"排義\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (125:5) {#if index === 0}
+    // (137:5) {#if index === 0}
     function create_if_block_2(ctx) {
     	let div1;
     	let div0;
@@ -1050,13 +1044,13 @@ var app = (function () {
     			t1 = text(t1_value);
     			t2 = text(t2_value);
     			t3 = space();
-    			attr_dev(div0, "class", div0_class_value = "stone-img runes " + /*item*/ ctx[15]["title"] + " " + ["", "reverse"][/*site*/ ctx[4][/*index*/ ctx[17]]] + " svelte-1hepn69");
+    			attr_dev(div0, "class", div0_class_value = "stone-img runes " + /*item*/ ctx[15]["title"] + " " + ["", "reverse"][/*site*/ ctx[4][/*index*/ ctx[17]]]);
     			attr_dev(div0, "title", div0_title_value = /*item*/ ctx[15]["title"]);
     			set_style(div0, "background-image", "url('img/runes/" + /*item*/ ctx[15]["title"].toLocaleLowerCase() + ".png')");
-    			add_location(div0, file, 126, 6, 2842);
-    			add_location(h4, file, 127, 6, 3041);
+    			add_location(div0, file, 138, 6, 2828);
+    			add_location(h4, file, 139, 6, 3027);
     			attr_dev(div1, "class", "stone-inner");
-    			add_location(div1, file, 125, 5, 2809);
+    			add_location(div1, file, 137, 5, 2795);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -1068,7 +1062,7 @@ var app = (function () {
     			append_dev(div1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*result, site*/ 24 && div0_class_value !== (div0_class_value = "stone-img runes " + /*item*/ ctx[15]["title"] + " " + ["", "reverse"][/*site*/ ctx[4][/*index*/ ctx[17]]] + " svelte-1hepn69")) {
+    			if (dirty & /*result, site*/ 24 && div0_class_value !== (div0_class_value = "stone-img runes " + /*item*/ ctx[15]["title"] + " " + ["", "reverse"][/*site*/ ctx[4][/*index*/ ctx[17]]])) {
     				attr_dev(div0, "class", div0_class_value);
     			}
 
@@ -1092,14 +1086,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(125:5) {#if index === 0}",
+    		source: "(137:5) {#if index === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (124:4) {#each result as item, index}
+    // (136:4) {#each result as item, index}
     function create_each_block_1(ctx) {
     	let if_block_anchor;
     	let if_block = /*index*/ ctx[17] === 0 && create_if_block_2(ctx);
@@ -1126,14 +1120,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(124:4) {#each result as item, index}",
+    		source: "(136:4) {#each result as item, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (136:5) {#if index >0}
+    // (148:5) {#if index >0}
     function create_if_block_1(ctx) {
     	let div1;
     	let div0;
@@ -1156,13 +1150,13 @@ var app = (function () {
     			t1 = text(t1_value);
     			t2 = text(t2_value);
     			t3 = space();
-    			attr_dev(div0, "class", div0_class_value = "stone-img runes " + /*item*/ ctx[15]["title"] + " " + ["", "reverse"][/*site*/ ctx[4][/*index*/ ctx[17]]] + " svelte-1hepn69");
+    			attr_dev(div0, "class", div0_class_value = "stone-img runes " + /*item*/ ctx[15]["title"] + " " + ["", "reverse"][/*site*/ ctx[4][/*index*/ ctx[17]]]);
     			attr_dev(div0, "title", div0_title_value = /*item*/ ctx[15]["title"]);
     			set_style(div0, "background-image", "url('img/runes/" + /*item*/ ctx[15]["title"].toLocaleLowerCase() + ".png')");
-    			add_location(div0, file, 137, 6, 3276);
-    			add_location(h4, file, 138, 6, 3473);
+    			add_location(div0, file, 149, 6, 3262);
+    			add_location(h4, file, 150, 6, 3459);
     			attr_dev(div1, "class", "stone-inner");
-    			add_location(div1, file, 136, 5, 3243);
+    			add_location(div1, file, 148, 5, 3229);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -1174,7 +1168,7 @@ var app = (function () {
     			append_dev(div1, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*result, site*/ 24 && div0_class_value !== (div0_class_value = "stone-img runes " + /*item*/ ctx[15]["title"] + " " + ["", "reverse"][/*site*/ ctx[4][/*index*/ ctx[17]]] + " svelte-1hepn69")) {
+    			if (dirty & /*result, site*/ 24 && div0_class_value !== (div0_class_value = "stone-img runes " + /*item*/ ctx[15]["title"] + " " + ["", "reverse"][/*site*/ ctx[4][/*index*/ ctx[17]]])) {
     				attr_dev(div0, "class", div0_class_value);
     			}
 
@@ -1198,14 +1192,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(136:5) {#if index >0}",
+    		source: "(148:5) {#if index >0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (135:4) {#each result as item, index}
+    // (147:4) {#each result as item, index}
     function create_each_block(ctx) {
     	let if_block_anchor;
     	let if_block = /*index*/ ctx[17] > 0 && create_if_block_1(ctx);
@@ -1232,7 +1226,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(135:4) {#each result as item, index}",
+    		source: "(147:4) {#each result as item, index}",
     		ctx
     	});
 
@@ -1240,9 +1234,10 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
-    	let main;
+    	let header;
     	let h1;
     	let t1;
+    	let main;
     	let div;
     	let button0;
     	let t3;
@@ -1252,6 +1247,9 @@ var app = (function () {
     	let t7;
     	let current_block_type_index;
     	let if_block;
+    	let t8;
+    	let footer;
+    	let h5;
     	let current;
     	let mounted;
     	let dispose;
@@ -1268,10 +1266,11 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			main = element("main");
+    			header = element("header");
     			h1 = element("h1");
     			h1.textContent = "盧恩符石";
     			t1 = space();
+    			main = element("main");
     			div = element("div");
     			button0 = element("button");
     			button0.textContent = "排義";
@@ -1283,27 +1282,34 @@ var app = (function () {
     			span.textContent = "喜歡嗎?歡迎分享網站";
     			t7 = space();
     			if_block.c();
-    			attr_dev(h1, "class", "svelte-1hepn69");
-    			add_location(h1, file, 80, 1, 1557);
+    			t8 = space();
+    			footer = element("footer");
+    			h5 = element("h5");
+    			h5.textContent = "純交流學習";
+    			add_location(h1, file, 79, 1, 1557);
+    			add_location(header, file, 78, 0, 1546);
     			attr_dev(button0, "class", "button-60");
     			attr_dev(button0, "title", "排義");
-    			add_location(button0, file, 82, 2, 1601);
+    			add_location(button0, file, 85, 2, 1621);
     			attr_dev(button1, "class", "button-60");
     			attr_dev(button1, "title", "及時占卜");
-    			add_location(button1, file, 83, 2, 1697);
-    			attr_dev(div, "class", "container ");
-    			add_location(div, file, 81, 1, 1573);
-    			add_location(span, file, 86, 1, 1809);
-    			attr_dev(main, "class", "svelte-1hepn69");
-    			add_location(main, file, 79, 0, 1548);
+    			add_location(button1, file, 86, 2, 1717);
+    			attr_dev(div, "class", "introl ");
+    			add_location(div, file, 84, 1, 1596);
+    			attr_dev(span, "class", "share");
+    			add_location(span, file, 89, 1, 1829);
+    			add_location(main, file, 81, 0, 1583);
+    			add_location(h5, file, 165, 2, 3609);
+    			add_location(footer, file, 164, 1, 3597);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, header, anchor);
+    			append_dev(header, h1);
+    			insert_dev(target, t1, anchor);
     			insert_dev(target, main, anchor);
-    			append_dev(main, h1);
-    			append_dev(main, t1);
     			append_dev(main, div);
     			append_dev(div, button0);
     			append_dev(div, t3);
@@ -1312,6 +1318,9 @@ var app = (function () {
     			append_dev(main, span);
     			append_dev(main, t7);
     			if_blocks[current_block_type_index].m(main, null);
+    			insert_dev(target, t8, anchor);
+    			insert_dev(target, footer, anchor);
+    			append_dev(footer, h5);
     			current = true;
 
     			if (!mounted) {
@@ -1360,8 +1369,12 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(header);
+    			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(main);
     			if_blocks[current_block_type_index].d();
+    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(footer);
     			mounted = false;
     			run_all(dispose);
     		}

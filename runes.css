@@ -1,13 +1,17 @@
 .runes {
-    z-index: 99;
+
     -webkit-transition: 0.18s 0.1s;
     -moz-transition: 0.18s 0.1s;
     transition: 0.18s 0.1s;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    height: 10em;
-    width: 10em;
+    /* height: 10rem; */
+    max-inline-size: 100%;
+    block-size: auto;
+    inline-size: auto;
+    height:150px;
+    padding: 1px;
     /* filter: opacity(0.5) drop-shadow(0 0 0 blue); */
 }
 
