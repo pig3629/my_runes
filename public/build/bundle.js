@@ -1346,12 +1346,13 @@ var app = (function () {
     			attr_dev(span1, "class", "fn12");
     			add_location(span1, file, 169, 3, 3803);
     			attr_dev(a, "class", "link-effect-4");
+    			attr_dev(a, "target", "_blank");
     			attr_dev(a, "href", "https://www.facebook.com/angelsforestspace");
     			add_location(a, file, 170, 26, 3873);
     			attr_dev(span2, "class", "fn12");
     			add_location(span2, file, 170, 3, 3850);
     			attr_dev(span3, "class", "fn12");
-    			add_location(span3, file, 171, 3, 3970);
+    			add_location(span3, file, 171, 3, 3986);
     			attr_dev(div1, "class", "note");
     			add_location(div1, file, 167, 3, 3744);
     			add_location(footer, file, 165, 1, 3729);
