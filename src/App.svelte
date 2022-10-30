@@ -76,15 +76,18 @@
 	}
 
 </script>
-
-<main>
+<header>
 	<h1>盧恩符石</h1>
-	<div class="container ">
+</header>
+<main>
+
+
+	<div class="introl ">
 		<button class="button-60" title="排義" on:click="{(e) => (handleTabClick('排義'))}" >排義</button>
 		<button class="button-60" title="及時占卜" on:click="{(e) => (handleTabClick('及時占卜'))}" >及時占卜</button>
 	</div>
 
-	<span >喜歡嗎?歡迎分享網站</span>
+	<span class="share" >喜歡嗎?歡迎分享網站</span>
 
 
 	{#if btn_default=="排義"}
@@ -106,20 +109,29 @@
 			</li>
 		</ul>
 	</div>
-	<div class="stage_content">
-		<div class="stone-img runes {stone_title} " title="{stone_title}" style="background-image: url('img/runes/{stone_title.toLocaleLowerCase()}.png');"></div>
+	<div class="stone-img runes {stone_title} " title="{stone_title}" style="background-image: url('img/runes/{stone_title.toLocaleLowerCase()}.png');"></div>
 		<h3> {stone["name"]}</h3>
 
-
 		<div class="stone-content" title="{stone_title}">
-				{stone_content}
+			{stone_content}
 		</div>
 
-	</div>
-	{:else}
-	<div class="stage_content">
 
-		<div class="">
+
+
+
+
+
+
+
+
+
+
+
+	{:else}
+	<div class="">
+
+
 			<div class="stone-box group-3item">
 				{#each result as item, index}
 					{#if index === 0}
@@ -143,36 +155,17 @@
 
 
 			</div>
-		</div>
+
 	</div>
 	{/if}
 
 
 
 </main>
-
+	<footer>
+		<h5>純交流學習</h5>
+	</footer>
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
 
-	}
-
-	h1 {
-		color: #418df7;
-		text-transform: uppercase;
-		font-size: 3em;
-		font-weight: 100;
-	}
-	.pd-5{
-		padding: 5px;
-	}
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
 
 </style>

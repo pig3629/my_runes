@@ -2,16 +2,27 @@ body{
 
     background-color: #0093E9;
     background-image: linear-gradient(0deg, #0093E9 0%, #80D0C7 50%, #ffffff 100%);
-    height: 100%;
-    width: 100%;
+
+    margin: 0;
+    padding: 0;
     transition: background 0.5s;
-    overflow: hidden;
+
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
+header,
+footer {
+  text-align: center;
+}
+main{
+    text-align: center;
 
+}
+.introl,.share{
+    padding: 0.5em;
+}
 .stage .btn-nav{
 
     display: flex;
@@ -27,15 +38,14 @@ body{
     transition: 0.23s;
 }
 .stage {
-    position: fixed;
-
-    right: 2rem;
-
-    margin-inline-end: -0.5em;
-    margin-block-start: 3rem;
+    z-index: 99;
+    position: absolute;
+    left: calc(100vw - 3.5em);
+    margin-inline-end: 1em;
+    margin-block-start: 2em;
 }
 .stage .nav-btn {
-
+    z-index: 99;
     padding: 12px;
 
     height: 25px;
@@ -62,7 +72,7 @@ ul li {
 }
 
 .nav-btn .arrow {
-    z-index: 99;
+
     position: relative;
     -webkit-transition: 0.18s 0.1s;
     -moz-transition: 0.18s 0.1s;
@@ -119,28 +129,11 @@ ul li {
 
     align-content: center;
     flex-wrap: nowrap;
-    margin-inline-start: 1rem;
+    /* margin-inline-start: 1rem; */
 }
 
 
-.stone-img::before{
 
-    content: "";
-    opacity: .34;
-    -webkit-transition: 0.23s;
-    -moz-transition: 0.23s;
-    transition: 0.23s;
-    width: 600px;
-    height: 600px;
-    position: absolute;
-
-    margin-left: -300px;
-    margin-top: -300px;
-    background: url("img/grad-bg.png") no-repeat center center/cover;
-    z-index: 1;
-    pointer-events: none;
-
-}
 .stone-img:hover{
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -160,13 +153,13 @@ ul li {
 .stone-content{
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
-    padding: 1rem;
+    padding: 10px;
     min-width: 16rem;
     max-height: 16rem;
-
+    margin-inline-end: 1em;
+    margin-inline-start: 1em;
     overflow-y: overlay;
-    margin: auto;
-    margin-inline-start: -0.5rem;
+
     background-color: rgba(244, 244, 244, 0.525);
     border-radius: 10px;
 }
@@ -178,13 +171,24 @@ ul li {
 
     padding: 12px;
 }
-.group-3item{
+.group-1item{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
+.group-3item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.stone-inner{
+    flex-basis: 1rem;
+    flex-grow: 1;
+
+}
 
 /* CSS */
 
@@ -254,3 +258,14 @@ ul li {
   ::-webkit-scrollbar-thumb:hover {
     background: #b6b6b68e;
   }
+
+  h1 {
+    color: #418df7;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 100;
+}
+.pd-5{
+    padding: 5px;
+}
+

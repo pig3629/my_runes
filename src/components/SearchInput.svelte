@@ -21,7 +21,7 @@
     dispatch('search', {
           value: e.target.value
         }, 1000);
-    
+
     // const dispatchDebounce = debounce(dispatch, 1000);
     // debounce('search', {
     //   value: e.target.value
@@ -37,7 +37,7 @@
 
   }
   .search {
-    width: 350px;
+  
     padding: 12px 20px;
     font-size: 18px;
     background-color: #fff;
