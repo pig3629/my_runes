@@ -168,7 +168,8 @@
 		 <div class="note">
 			<span ckass="fn14">純交流學習</span>
 			<span class="fn12">想知道更多? 想了解排義、解惑?</span>
-			<span class="fn12">email: 123@123.com</span>
+			<span class="fn12">粉專: <a class="link-effect-4" href="https://www.facebook.com/angelsforestspace">天使森林秘境</a></span>
+			<span class="fn12">email: pig3629@gmail.com</span>
 		 </div>
 
 	</footer>
