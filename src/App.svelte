@@ -13,7 +13,7 @@
 	function handleTabClick(tabName) {
 		btn_default = tabName;
 		if(btn_default =="及時占卜"){
-			startPlay();
+		//	startPlay();
 		}
 	}
 
@@ -77,18 +77,16 @@
 
 </script>
 <header>
-	<h1>盧恩符石</h1>
+	<p class="head-title">盧恩符石</p>
+
 </header>
 <main>
-
 
 	<div class="introl ">
 		<button class="button-60" title="排義" on:click="{(e) => (handleTabClick('排義'))}" >排義</button>
 		<button class="button-60" title="及時占卜" on:click="{(e) => (handleTabClick('及時占卜'))}" >及時占卜</button>
 	</div>
-
-	<span class="share" >喜歡嗎?歡迎分享網站</span>
-
+	<hr class="hr-mid-circle" multiple data-content="交流分享">
 
 	{#if btn_default=="排義"}
 	<div class="pd-5">
@@ -129,10 +127,12 @@
 
 
 	{:else}
+
 	<div class="">
+		<button class="button-60 mg-5" title="及時占卜" on:click="{(e) => (startPlay())}" >開始占卜</button>
 
 
-			<div class="stone-box group-3item">
+			<div class="stone-box group-1item">
 				{#each result as item, index}
 					{#if index === 0}
 					<div class="stone-inner">
@@ -162,8 +162,15 @@
 
 
 </main>
+
 	<footer>
-		<h5>純交流學習</h5>
+
+		 <div class="note">
+			<span ckass="fn14">純交流學習</span>
+			<span class="fn12">想知道更多? 想了解排義、解惑?</span>
+			<span class="fn12">email: 123@123.com</span>
+		 </div>
+
 	</footer>
 <style>
 
