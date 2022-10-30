@@ -11,10 +11,12 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+
 }
 header,
 footer {
   text-align: center;
+  padding-bottom: 10px;
 }
 main{
     text-align: center;
@@ -322,12 +324,5 @@ ul li {
 }
 .hr-mid-circle[multiple]::before {
     box-shadow: 1.5em 0, -1.5em 0;
-}
-
-.link-effect-4 {
-
-
-    color: #e5e5e5;
-
 }
 
