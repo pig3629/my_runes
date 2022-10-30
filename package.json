@@ -2,7 +2,7 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://pig3629.github.io/my_runes/",
+  "homepage": "https://pig3629.github.io/my_runes2/",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
