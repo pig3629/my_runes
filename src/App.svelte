@@ -169,7 +169,7 @@
 			<span ckass="fn14">純交流學習</span>
 			<span class="fn12">想知道更多? 想了解排義、解惑?</span>
 			<span class="fn12">粉專: <a  target="_blank" href="https://www.facebook.com/angelsforestspace">天使森林秘境</a></span>
-			<span class="fn12">email: pig3629@gmail.com</span>
+			<span class="fn12">Email: <b> <a href = "mailto:pig3629@gmail.com">pig3629@gmail.com</a></b>、<b><a href = "mailto:wuxin840411@gmail.com">wuxin840411@gmail.com</a></b></span>
 		 </div>
 
 	</footer>
